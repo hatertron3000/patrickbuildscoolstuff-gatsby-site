@@ -13,6 +13,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+      CONTENTFUL_API_KEY: ${{secrets.CONTENTFUL_API_KEY}}
+      BUCKET_NAME: ${{secrets.BUCKET_NAME}}
+      AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+      AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x, 15.x]
