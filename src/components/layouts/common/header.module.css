@@ -1,0 +1,33 @@
+.header {
+  background-color: #fdfdff;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  align-items: flex-end;
+}
+
+.logo {
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: -0.221ch;
+  margin-left: 1em;
+  text-decoration: none;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000000;
+}
+
+Link {
+  position: absolute;
+  bottom: 0;
+}
