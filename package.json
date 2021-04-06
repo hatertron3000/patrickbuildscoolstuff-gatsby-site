@@ -1,13 +1,13 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "patrickbuildscoolstuff-gatsby-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "My gatsby website",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy",
+    "deploy": "gatsby-plugin-s3 deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
