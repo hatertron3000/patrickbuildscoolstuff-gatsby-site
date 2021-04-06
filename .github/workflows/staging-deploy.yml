@@ -11,6 +11,7 @@ on:
 
 jobs:
   build:
+    environment: staging
     runs-on: ubuntu-latest
 
     env:
