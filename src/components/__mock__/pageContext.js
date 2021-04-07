@@ -54,7 +54,7 @@ module.exports = {
     "summary": {
       "summary": "Tacos really are the best."
     },
-    "publishedDate": "2021-04-04T20:51-05:00",
+    "publishedDate": new Date(1617753600000),
     "slug": "tacos",
     "thumbnail": {
       "gatsbyImageData": {
