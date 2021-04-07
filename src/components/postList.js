@@ -42,7 +42,7 @@ const PostList = () => {
 
                 return <div key={slug} style={{display: "flex", marginBottom: "2em"}}>
                   <div style={{maxWidth: "150px"}}>
-                    <GatsbyImage image={getImage(thumbnail)} style={{borderRadius: "50%"}} />
+                    <GatsbyImage image={getImage(thumbnail)} style={{borderRadius: "10%", borderColor: "#0c0c0c", borderWidth: ".33em", borderStyle: "solid"}} />
                   </div>
                   <div style={{marginLeft: "2em", marginBottom: "1em"}}>
                     <Link to={`/${slug}`}><h3>{headline}</h3></Link>

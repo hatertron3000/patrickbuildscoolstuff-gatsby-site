@@ -27,10 +27,11 @@ const Post = ({pageContext}) => {
             </blockquote>,
             [BLOCKS.EMBEDDED_ASSET]: node => {
               const ref = content.references.find(ref => ref.contentful_id === node.data.target.sys.id)
+              console.log(ref)
               const image = getImage(ref)
               return (
                 <div className={styles.contentImage}>
-                    <GatsbyImage image={image} alt={ref.description ? ref.description : ''} />
+                  <GatsbyImage image={image} alt={'' /* TODO: IMPLEMENT ALT TAGS */} />            
                 </div>
               )
             }

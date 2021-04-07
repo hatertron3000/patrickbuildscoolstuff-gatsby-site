@@ -1,5 +1,12 @@
 .contentImage {
-  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gatsbyImage {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blockquoteContainer {
