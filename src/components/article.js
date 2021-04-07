@@ -5,7 +5,6 @@ const Post = ({
     headline,
     publishedDate,
     thumbnail,
-    published,
     content,
 }) => {
     const date = new Date(publishedDate)

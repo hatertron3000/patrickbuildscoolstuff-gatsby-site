@@ -2,12 +2,12 @@ import React from "react"
 import renderer from "react-test-renderer"
 
 import Header from "./header"
-import gatsbyConfig from "../../../../gatsby-config"
+import {siteMetadata} from "../../../../gatsby-config"
 
 
 describe("Header", () => {
     it("matches snapshot", () => {
-        const { title } = gatsbyConfig.siteMetadata
+        const { title } = siteMetadata
         const tree = renderer
             .create(<Header title={title} />)
             .toJSON()

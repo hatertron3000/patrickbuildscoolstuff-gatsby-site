@@ -18,20 +18,27 @@ const Post = ({pageContext}) => {
     const richTextOpts = {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+            [BLOCKS.QUOTE]: (node, children) => <blockquote>
+              <div className={styles.blockquoteContainer}>
+                <div className={styles.leftQuotationMark}>&ldquo;</div>
+                <div>{children}</div>
+                <div className={styles.rightQuotationMark}>&rdquo;</div>
+              </div>
+            </blockquote>,
             [BLOCKS.EMBEDDED_ASSET]: node => {
               const ref = content.references.find(ref => ref.contentful_id === node.data.target.sys.id)
-              console.log('ref', ref, 'content', content)
               const image = getImage(ref)
               return (
                 <div className={styles.contentImage}>
-                    <GatsbyImage image={image} alt={ref.description} />
+                    <GatsbyImage image={image} alt={ref.description ? ref.description : ''} />
                 </div>
               )
             }
         }
     }
 
-    return <Page>
+    return (
+    <Page>
       <Link to="/"><small>&lt; Home</small></Link>
       <Article 
       headline={headline}
@@ -40,6 +47,7 @@ const Post = ({pageContext}) => {
       content={documentToReactComponents(JSON.parse(content.raw), richTextOpts)}
       />
     </Page>
+    )
 }
 
 export default Post

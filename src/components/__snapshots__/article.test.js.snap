@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article matches snapshot 1`] = `
+<div>
+  <h1>
+    Tacos
+  </h1>
+  <div>
+    <p>
+      4/4/2021, 8:51:00 PM
+    </p>
+  </div>
+  <div>
+    <h2>
+      Let me tell you about my tacos.
+    </h2>
+    <p>
+      This is where you would 
+      <i>
+        write 
+      </i>
+      <u>
+        about 
+      </u>
+      <b>
+        tacos
+      </b>
+      . They are really great and stuff.
+    </p>
+    <p>
+      But those are pictures of hot dogs. Oh no!
+    </p>
+    <h3>
+      What will we ever do?
+    </h3>
+    <p>
+      Ah, that's better.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Here
+        </p>
+      </li>
+      <li>
+        <p>
+          are
+        </p>
+      </li>
+      <li>
+        <p>
+          some
+        </p>
+      </li>
+      <li>
+        <p>
+          bullets
+        </p>
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <ol>
+      <li>
+        <p>
+          and
+        </p>
+      </li>
+      <li>
+        <p>
+          numbers
+        </p>
+      </li>
+      <li>
+        <p>
+          too
+        </p>
+      </li>
+    </ol>
+    <p>
+      
+    </p>
+    <blockquote>
+      <p>
+        I am a blockquote
+      </p>
+    </blockquote>
+    <hr />
+    <p>
+      I'm below an HR
+    </p>
+    <p>
+      
+    </p>
+  </div>
+</div>
+`;
