@@ -12,7 +12,7 @@ const Post = ({
     return <div>
         <h1>{headline}</h1>
         <div className={styles.dateline}>
-            <p>{date.toLocaleString()}</p>
+            <p>{date.toString()}</p>
         </div>
         <div>
             {content}
