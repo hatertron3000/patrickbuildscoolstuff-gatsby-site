@@ -46,7 +46,7 @@ const PostList = () => {
                   </div>
                   <div style={{marginLeft: "2em", marginBottom: "1em"}}>
                     <Link to={`/${slug}`}><h3>{headline}</h3></Link>
-                    <div className="dateline">{date.toLocaleString()}</div>
+                    <div className="dateline">{date.toDateString()}</div>
                     <div style={{paddingTop: "1em"}}>{summary.summary}</div>
                   </div>
                 </div>

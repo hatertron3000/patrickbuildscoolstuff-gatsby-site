@@ -12,7 +12,7 @@ const Post = ({
     return <div>
         <h1>{headline}</h1>
         <div className={styles.dateline}>
-            <p>{date.toString()}</p>
+            <p>{date.toDateString()}</p>
         </div>
         <div>
             {content}
