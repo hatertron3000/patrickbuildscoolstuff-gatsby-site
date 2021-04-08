@@ -2,8 +2,8 @@
   "name": "patrickbuildscoolstuff-gatsby-site",
   "private": true,
   "description": "My gatsby website",
-  "version": "0.1.0",
-  "license": "",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -39,9 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/hatertron3000/patrickbuildscoolstuff-gatsby-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/hatertron3000/patrickbuildscoolstuff-gatsby-site/issues"
   }
 }
