@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches snapshot 1`] = `
+<div>
+  <div>
+    <div>
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Patrickbuildscoolstuff
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -28,7 +28,7 @@ const Page = ({children, title}) => {
                 <title>{title}</title>
             }
         </Helmet>
-        <Header />
+        <Header title={siteTitle} />
         <div className={styles.main}>
             { children }
         </div>

@@ -1,0 +1,48 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [main]
+  # pull_request:
+  #  branches: [ main ]
+
+jobs:
+  build:
+    environment: staging
+    runs-on: ubuntu-latest
+
+    env:
+      CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}
+      CONTENTFUL_API_KEY: ${{secrets.CONTENTFUL_API_KEY}}
+      BUCKET_NAME: ${{secrets.BUCKET_NAME}}
+      AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+      AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - run: sudo timedatectl set-timezone CST6CDT
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      # - run: npm run build --if-present
+      - run: npm test
+
+      - name: Configure AWS credentials from github environments
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy to S3
+        run: npm run deploy

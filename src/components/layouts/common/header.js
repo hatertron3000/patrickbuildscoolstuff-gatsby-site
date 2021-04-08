@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import * as headerStyles from './header.module.css'
 
-const Header = () => (
+const Header = ({title}) => (
     <div className={ headerStyles.header }>
         <div className={headerStyles.container}>
                 <div className={headerStyles.logo}>
                     <Link to="/">
-                        Patrickbuildscoolstuff
+                        {title}
                     </Link>
                 </div>
         </div>

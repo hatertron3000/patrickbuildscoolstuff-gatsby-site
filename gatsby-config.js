@@ -25,5 +25,11 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-plugin-s3',
+      options: {
+        bucketName: process.env.BUCKET_NAME,
+      }
+    }
   ],
 }

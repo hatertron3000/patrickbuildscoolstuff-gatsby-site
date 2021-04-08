@@ -5,7 +5,6 @@ const Post = ({
     headline,
     publishedDate,
     thumbnail,
-    published,
     content,
 }) => {
     const date = new Date(publishedDate)
@@ -13,7 +12,7 @@ const Post = ({
     return <div>
         <h1>{headline}</h1>
         <div className={styles.dateline}>
-            <p>{date.toLocaleString()}</p>
+            <p>{date.toDateString()}</p>
         </div>
         <div>
             {content}

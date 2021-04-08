@@ -23,7 +23,6 @@ exports.createPages = async ({ graphql, actions, reporter}) => {
             summary {
               summary
             }
-            published
             publishedDate
             slug
             headline
