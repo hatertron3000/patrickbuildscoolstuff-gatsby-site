@@ -5,13 +5,13 @@ name: Node.js CI
 
 on:
   push:
-    branches: [staging]
+    branches: [main]
   # pull_request:
   #  branches: [ main ]
 
 jobs:
   build:
-    environment: staging
+    environment: production
     runs-on: ubuntu-latest
 
     env:
