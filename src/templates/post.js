@@ -38,7 +38,7 @@ const Post = ({pageContext}) => {
     }
 
     return (
-    <Page>
+    <Page title={headline}>
       <Link to="/"><small>&lt; Home</small></Link>
       <Article 
       headline={headline}
