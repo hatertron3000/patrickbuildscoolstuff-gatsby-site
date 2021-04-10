@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import * as styles from "./postList.module.css"
 
 const PostList = () => {
     const { allContentfulPost } = useStaticQuery(
@@ -40,17 +41,20 @@ const PostList = () => {
 
                     const date = new Date(publishedDate)
 
-                return <div key={slug} style={{display: "flex", marginBottom: "2em"}}>
-                  <div style={{maxWidth: "150px"}}>
-                    <GatsbyImage image={getImage(thumbnail)} style={{borderRadius: "10%", borderColor: "#0c0c0c", borderWidth: ".33em", borderStyle: "solid"}} />
+                return <div key={slug} className={styles.container}>
+                  <div className={styles.thumbnailContainer}>
+                    <Link to={`/${slug}`}>
+                        <GatsbyImage image={getImage(thumbnail)} className={styles.thumbnail} />
+                    </Link>
                   </div>
-                  <div style={{marginLeft: "2em", marginBottom: "1em"}}>
+                  <div className={styles.listing}>
                     <Link to={`/${slug}`}><h3>{headline}</h3></Link>
                     <div className="dateline">{date.toDateString()}</div>
-                    <div style={{paddingTop: "1em"}}>{summary.summary}</div>
+                    <div className={styles.blurb}>{summary.summary}</div>
                   </div>
                 </div>
-            })}
+            })
+            .reverse()}
         </>
     )
 }
