@@ -32,8 +32,7 @@ const PostList = () => {
         <>
             {allContentfulPost
                 .edges
-                .sort(({node}) => node.date)
-                .reverse()
+                .sort(({node}) => node.publishedDate)
                 .map(({ node }) => {
                 const {
                     headline,
@@ -48,7 +47,11 @@ const PostList = () => {
                 return <div key={slug} className={styles.container}>
                   <div className={styles.thumbnailContainer}>
                     <Link to={`/${slug}`}>
-                        <GatsbyImage image={getImage(thumbnail)} className={styles.thumbnail} />
+                        <GatsbyImage 
+                            image={getImage(thumbnail)}
+                            className={styles.thumbnail}
+                            alt={thumbnail.description}
+                        />
                     </Link>
                   </div>
                   <div className={styles.listing}>
@@ -57,7 +60,8 @@ const PostList = () => {
                     <div className={styles.blurb}>{summary.summary}</div>
                   </div>
                 </div>
-            })}
+            })
+            .reverse()}
         </>
     )
 }
