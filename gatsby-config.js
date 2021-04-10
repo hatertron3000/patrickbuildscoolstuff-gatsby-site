@@ -11,7 +11,8 @@ console.log(`Env file will be: .env.${process.env.NODE_ENV}`)
 
 module.exports = {
   siteMetadata: {
-    title: `Patrickbuildscoolstuff`
+    title: `Patrickbuildscoolstuff`,
+    siteUrl: process.env.URL
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,6 +21,12 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_API_KEY,
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap.xml'
       }
     },
     `gatsby-plugin-image`,

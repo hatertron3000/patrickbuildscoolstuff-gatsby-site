@@ -10,19 +10,19 @@ const PostList = () => {
                 allContentfulPost {
                 edges {
                     node {
-                    headline
-                    slug
-                    thumbnail {
-                        description
-                        title
-                        gatsbyImageData
+                        headline
+                        slug
+                        thumbnail {
+                            description
+                            title
+                            gatsbyImageData
+                        }
+                        summary { 
+                            summary
+                        }
+                            publishedDate
+                        }
                     }
-                    summary { 
-                        summary
-                    }
-                        publishedDate
-                    }
-                }
                 }
             }
         `
