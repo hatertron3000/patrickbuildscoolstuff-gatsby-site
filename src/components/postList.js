@@ -32,6 +32,7 @@ const PostList = () => {
         <>
             {allContentfulPost
                 .edges
+                .sort(({node}) => node.publishedDate)
                 .map(({ node }) => {
                 const {
                     headline,
