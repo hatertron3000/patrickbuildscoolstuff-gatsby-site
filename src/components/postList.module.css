@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.thumbnailContainer {
+  width: 150px;
+}
+
+.thumbnail {
+  transition: 0.33s;
+  border-radius: 10%;
+  border-color: #0c0c0c;
+  border-width: 0.33em;
+  border-style: solid;
+}
+
+.thumbnail:hover {
+  transition: 0.33s;
+  border-color: #28e2ba;
+}
+
+.listing {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.blurb {
+  padding-top: 0.66em;
+}

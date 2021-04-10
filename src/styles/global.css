@@ -13,14 +13,17 @@ h3 {
 
 a,
 a:visited {
+  transition: 0.33s;
   color: #0f4d66;
 }
 
 a:hover {
+  transition: 0.33s;
   color: #28e2ba;
 }
 
 a:active {
+  transition: 0.33s;
   color: #f048ff;
 }
 
