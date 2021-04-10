@@ -30,7 +30,11 @@ const PostList = () => {
 
     return (
         <>
-            {allContentfulPost.edges.map(({ node }) => {
+            {allContentfulPost
+                .edges
+                .sort(({node}) => node.date)
+                .reverse()
+                .map(({ node }) => {
                 const {
                     headline,
                     slug,
@@ -53,8 +57,7 @@ const PostList = () => {
                     <div className={styles.blurb}>{summary.summary}</div>
                   </div>
                 </div>
-            })
-            .reverse()}
+            })}
         </>
     )
 }
